@@ -9,7 +9,7 @@ buttons.forEach(button => {
 
     if (soundName === 'stop') return;
 
-    const audio = new Audio(./sounds/${soundName}.mp3);
+    const audio = `new Audio(./sounds/${soundName}.mp3)`;
     audio.play();
   });
 });
