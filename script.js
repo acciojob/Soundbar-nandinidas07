@@ -9,14 +9,17 @@ buttons.forEach(button => {
 
     if (soundName === 'stop') return;
 
-    const audio = `new Audio(./sounds/${soundName}.mp3)`;
+    const audio = document.getElementById(soundName);
+	  if (audio){
     audio.play();
+	  }
   });
 });
 
 function stopSounds() {
-  const audios = document.querySelectorAll('audio');
-  audios.forEach(audio => {
+	sounds.forEach(sound=>{
+  const audios = document.getElementById(sound);
+  
     audio.pause();
     audio.currentTime = 0;
   });
